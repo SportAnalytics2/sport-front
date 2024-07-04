@@ -1,12 +1,9 @@
-import AccordionCard from "@/components/home-page/accordion-card";
-import Wrapper from "@/components/wrapper";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mt-16">
-      <Wrapper>
-        <AccordionCard />
-      </Wrapper>
+    <main>
+      <Link href={"/disciplines"}>Ir a disciplinas</Link>
     </main>
   );
 }
