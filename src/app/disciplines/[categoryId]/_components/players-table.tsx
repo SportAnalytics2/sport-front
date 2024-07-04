@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   Table,
   TableBody,
@@ -6,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+
 import { categories } from "@/mocks/categories";
 
 export default function CoachingStaffTable({
@@ -28,13 +31,18 @@ export default function CoachingStaffTable({
         {players &&
           players.map((player) => (
             <TableRow key={player.id}>
-              <TableCell className="flex items-center gap-2 font-medium">
-                <img
-                  src={player.image}
-                  alt="Foto del jugador"
-                  className="size-8 rounded-full"
-                />
-                {player.name}
+              <TableCell>
+                <Link
+                  href={`/disciplines/${category?.id}/${player.id}`}
+                  className="flex items-center gap-2 font-medium"
+                >
+                  <img
+                    src={player.image}
+                    alt="Foto del jugador"
+                    className="size-8 rounded-full"
+                  />
+                  <p>{player.name}</p>
+                </Link>
               </TableCell>
               <TableCell className="text-right">{player.position}</TableCell>
             </TableRow>
