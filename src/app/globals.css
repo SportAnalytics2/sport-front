@@ -60,6 +60,10 @@
   }
 }
 
+main {
+  padding-block: 4rem;
+}
+
 .wrapper {
   width: min(100% - 3rem, 130ch);
   margin-inline: auto;
