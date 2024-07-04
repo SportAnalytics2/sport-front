@@ -16,8 +16,6 @@ export default function CoachingStaffTable({
   const category = categories.find((category) => category.id === categoryId);
   const { coachingStaff } = category!;
 
-  console.log(coachingStaff);
-
   return (
     <Table>
       <TableHeader>
