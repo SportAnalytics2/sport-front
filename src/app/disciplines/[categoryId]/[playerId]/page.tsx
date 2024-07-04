@@ -1,6 +1,14 @@
 import Link from "next/link";
 
 import Wrapper from "@/components/wrapper";
+import PlayerCardHeader from "./_components/player-card-header";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 import { categories } from "@/mocks/categories";
 
@@ -21,12 +29,18 @@ export default function PlayerPage({
         <Link href={`/disciplines/${categoryId}`} aria-label="Volver atrás">
           Volver
         </Link>
-        <p>
-          Detalles de{" "}
-          <strong>
-            {name} (id {id})
-          </strong>
-        </p>
+
+        <Card className="w-full space-y-8 p-12">
+          <CardHeader>
+            <PlayerCardHeader />
+          </CardHeader>
+
+          <Separator className="h-[2px]" />
+
+          <CardContent></CardContent>
+
+          <CardFooter></CardFooter>
+        </Card>
       </Wrapper>
     </main>
   );
