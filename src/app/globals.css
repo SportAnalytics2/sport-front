@@ -51,11 +51,25 @@
 }
 
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+@layer base {
+  * {
+    @apply border-border;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.wrapper {
+  width: min(100% - 3rem, 130ch);
+  margin-inline: auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+@media (width > 768px) {
+  .wrapper {
+    width: min(100% - 6rem, 130ch);
+  }
+}
