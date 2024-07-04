@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+
 import Wrapper from "@/components/wrapper";
-import { categories } from "@/mocks/categories";
 import PlayersTable from "./_components/players-table";
 import CoachingStaffTable from "./_components/coaching-staff-table";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button";
+
+import { categories } from "@/mocks/categories";
 
 export default function CategoryPage({
   params,
@@ -21,7 +24,13 @@ export default function CategoryPage({
       <Wrapper className="space-y-8">
         <div className="flex w-full justify-between">
           <h3 className="text-xl">{name}</h3>
-          <Button>Ver unidades arbitrarias</Button>
+          <Link
+            href={`/disciplines/${id}/arbitrary-units`}
+            className={buttonVariants({ variant: "default" })}
+            aria-label="Ver unidades arbitrarias"
+          >
+            Ver unidades arbitrarias
+          </Link>
         </div>
 
         <section className="w-full space-y-4">
