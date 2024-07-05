@@ -1,5 +1,5 @@
-import AccordionCard from "@/components/home-page/accordion-card";
 import Wrapper from "@/components/wrapper";
+import AccordionCard from "@/app/disciplines/_components/accordion-card";
 
 export default function DisciplinesPage() {
   return (

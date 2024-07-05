@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import SearchInput from "../search-input";
+import SearchInput from "../../../components/search-input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -29,7 +29,7 @@ export default function AccordionCard() {
             <AccordionItem
               key={item.id}
               value={item.id}
-              className={`rounded-md duration-200 hover:bg-muted ${item.id === selectedItem ? "bg-muted" : ""}`}
+              className={`duration-200 hover:bg-muted ${item.id === selectedItem ? "bg-muted" : ""}`}
             >
               <AccordionTrigger
                 className="px-4 hover:no-underline"
