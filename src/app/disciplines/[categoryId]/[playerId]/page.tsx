@@ -5,6 +5,7 @@ import PlayerCardHeader from "./_components/player-card-header";
 import PlayerStats from "./_components/player-stats";
 
 import { categories } from "@/mocks/categories";
+import PlayerArbitraryUnits from "./_components/player-arbitrary-units";
 
 export default function PlayerPage({
   params,
@@ -27,9 +28,15 @@ export default function PlayerPage({
         <article className="w-full rounded-md border border-border bg-background p-12 shadow">
           <PlayerCardHeader />
 
-          <div className="my-8 h-[2px] w-full bg-border"></div>
+          {/* Separator */}
+          <div className="my-12 h-[2px] w-full bg-border"></div>
 
           <PlayerStats />
+
+          {/* Separator */}
+          <div className="my-12 h-[2px] w-full bg-border"></div>
+
+          <PlayerArbitraryUnits />
         </article>
       </Wrapper>
     </main>
