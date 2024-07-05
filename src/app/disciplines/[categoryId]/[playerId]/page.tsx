@@ -1,11 +1,10 @@
-import Link from "next/link";
-
 import Wrapper from "@/components/wrapper";
 import PlayerCardHeader from "./_components/player-card-header";
 import PlayerStats from "./_components/player-stats";
 
 import { categories } from "@/mocks/categories";
 import PlayerArbitraryUnits from "./_components/player-arbitrary-units";
+import GoBackArrow from "@/components/go-back-arrow";
 
 export default function PlayerPage({
   params,
@@ -17,13 +16,12 @@ export default function PlayerPage({
   const category = categories.find((category) => category.id === categoryId);
   const player = category?.players?.find((player) => player.id === playerId);
 
-  const { id, name } = player!;
+  // const { id, name } = player!;
+
   return (
     <main>
       <Wrapper>
-        <Link href={`/disciplines/${categoryId}`} aria-label="Volver atrás">
-          Volver
-        </Link>
+        <GoBackArrow href={`/disciplines/${categoryId}`} />
 
         <article className="w-full rounded-md border border-border bg-background p-12 shadow">
           <PlayerCardHeader />
