@@ -2,13 +2,7 @@ import Link from "next/link";
 
 import Wrapper from "@/components/wrapper";
 import PlayerCardHeader from "./_components/player-card-header";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import PlayerStats from "./_components/player-stats";
 
 import { categories } from "@/mocks/categories";
 
@@ -30,17 +24,13 @@ export default function PlayerPage({
           Volver
         </Link>
 
-        <Card className="w-full space-y-8 p-12">
-          <CardHeader>
-            <PlayerCardHeader />
-          </CardHeader>
+        <article className="w-full rounded-md border border-border bg-background p-12 shadow">
+          <PlayerCardHeader />
 
-          <Separator className="h-[2px]" />
+          <div className="my-8 h-[2px] w-full bg-border"></div>
 
-          <CardContent></CardContent>
-
-          <CardFooter></CardFooter>
-        </Card>
+          <PlayerStats />
+        </article>
       </Wrapper>
     </main>
   );
