@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 
 import { categories } from "@/mocks/categories";
+import GoBackArrow from "@/components/go-back-arrow";
 
 export default function CategoryPage({
   params,
@@ -22,6 +23,8 @@ export default function CategoryPage({
   return (
     <main>
       <Wrapper className="space-y-8">
+        <GoBackArrow href="/disciplines" />
+
         <div className="flex w-full justify-between">
           <h3 className="text-xl">{name}</h3>
           <Link
