@@ -68,8 +68,6 @@ main {
   width: min(100% - 3rem, 130ch);
   margin-inline: auto;
   position: relative;
-  display: grid;
-  place-items: center;
 }
 
 @media (width > 768px) {
