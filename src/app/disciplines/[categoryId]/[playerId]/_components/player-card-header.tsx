@@ -3,9 +3,9 @@ import { ShareIcon, TwoDirectionArrowsIcon } from "@/components/icons";
 
 export default function PlayerCardHeader() {
   return (
-    <section className="flex items-center justify-between">
+    <section className="flex flex-wrap items-center justify-between gap-8">
       <article className="flex items-center gap-4">
-        <div className="relative size-28">
+        <div className="relative size-20 md:size-28">
           <img
             src="https://github.com/shadcn.png"
             alt="Avatar del jugador"
@@ -17,8 +17,8 @@ export default function PlayerCardHeader() {
         </div>
 
         <div>
-          <h1 className="text-2xl">Nombre del jugador</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="text-xl lg:text-2xl">Nombre del jugador</h1>
+          <p className="text-base text-muted-foreground lg:text-xl">
             Descripción del jugador
           </p>
         </div>
@@ -26,11 +26,11 @@ export default function PlayerCardHeader() {
 
       <div className="flex gap-4">
         <Button variant={"outline"} className="flex items-center gap-2">
-          <ShareIcon className="size-4" />
+          <ShareIcon className="size-3 md:size-4" />
           Compartir
         </Button>
         <Button className="flex items-center gap-2">
-          <TwoDirectionArrowsIcon className="size-5" />
+          <TwoDirectionArrowsIcon className="size-3 md:size-5" />
           Comparar
         </Button>
       </div>

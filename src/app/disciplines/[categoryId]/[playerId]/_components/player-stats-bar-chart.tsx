@@ -58,7 +58,7 @@ export default function PlayerStatsBarChart() {
     <ResponsiveContainer
       width="100%"
       height={350}
-      className="h-full w-[60%] rounded-md border p-4 pt-6 shadow"
+      className="h-full w-[50%] rounded-md border p-4 pt-6 shadow"
     >
       <BarChart data={data}>
         <XAxis

@@ -3,7 +3,7 @@ import PlayerInfo from "./player-info";
 
 export default function PlayerStats() {
   return (
-    <section className="flex justify-between gap-20">
+    <section className="flex flex-col justify-between gap-20 lg:flex-row">
       <PlayerInfo />
 
       <PlayerStatsBarChart />

@@ -23,7 +23,7 @@ export default function PlayerPage({
       <Wrapper>
         <GoBackArrow href={`/disciplines/${categoryId}`} />
 
-        <article className="w-full rounded-md border border-border bg-background p-12 shadow">
+        <article className="w-full rounded-md border border-border bg-background p-4 shadow md:p-8 lg:p-12">
           <PlayerCardHeader />
 
           {/* Separator */}
